@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap");
+
+/* * {
+  border: 1px solid black;
+} */
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  font-weight: bold;
+  padding: 16px;
+  cursor: pointer;
+}
+
+#result {
+  font-size: 12em;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.calculator-display {
+  font-size: 12em;
+  width: 100%;
+  text-align: center;
+  border: none;
+}
