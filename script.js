@@ -93,7 +93,8 @@ function calculate(firstOperand, secondOperand, operator) {
   } else if (operator === "*") {
     return firstOperand * secondOperand;
   } else if (operator === "/") {
-    return firstOperand / secondOperand;
+    if (firstOperand === 0 && secondOperand === 0)
+      return firstOperand / secondOperand;
   }
 
   return secondOperand;

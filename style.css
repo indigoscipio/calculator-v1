@@ -35,10 +35,6 @@ button:active {
   transform: scale(2);
 }
 
-#result {
-  font-size: 12em;
-}
-
 .calculator {
   display: flex;
   flex-direction: column;
@@ -96,4 +92,5 @@ button:active {
   width: 100%;
   text-align: center;
   border: none;
+  transition: all 0.2s ease;
 }
