@@ -36,7 +36,6 @@ allBtns.addEventListener("click", (e) => {
     updateDisplay();
     return;
   }
-
   inputDigit(target.value);
   updateDisplay();
 });

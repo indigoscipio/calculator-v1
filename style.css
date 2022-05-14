@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap");
 
 /* * {
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.144);
 } */
 
 body {
   margin: 0;
+  padding: 0;
+  overflow: hidden;
   text-align: center;
   font-family: "Roboto Mono", monospace;
   display: flex;
@@ -20,6 +22,17 @@ button {
   font-weight: bold;
   padding: 16px;
   cursor: pointer;
+  border: 1px solid rgb(212, 212, 212);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+button:active {
+  transform: scale(2);
 }
 
 #result {
@@ -30,10 +43,56 @@ button {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  align-items: center;
+}
+
+.button-container {
+  width: 200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.calc-button[value="+"] {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.calc-button[value="-"] {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.calc-button[value="/"] {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.calc-button[value="*"] {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.calc-button[value="1"] {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.calc-button[value="2"] {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.calc-button[value="3"] {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.calc-button[value="4"] {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.calc-button[value="5"] {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.calc-button[value="6"] {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.calc-button[value="="] {
+  grid-area: 2 / 4 / 6 / 5;
+}
+.calc-button[value="0"] {
+  grid-area: 5 / 1 / 6 / 3;
 }
 
 .calculator-display {
-  font-size: 12em;
+  background-color: transparent;
+  font-size: 14em;
   width: 100%;
   text-align: center;
   border: none;
